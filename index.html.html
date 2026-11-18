@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reglas del Staff</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --bg:#000000; --surface:#0c0c0c; --line:#262626; --line-2:#363636;
+  --text:#ededed; --muted:#9a9a9a; --faint:#5c5c5c; --white:#ffffff;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* Cabecera */
+header{padding:96px 0 56px;border-bottom:1px solid var(--line)}
+h1{
+  margin:0;font-weight:700;letter-spacing:-.045em;line-height:.95;
+  font-size:clamp(48px,11vw,104px);color:var(--white);
+}
+h1 span{color:var(--faint)}
+.lead{margin:28px 0 0;max-width:46ch;color:var(--muted);font-size:19px}
+
+/* Aviso */
+.notice{
+  margin:48px 0 0;padding:22px 24px;background:var(--surface);
+  border:1px solid var(--line);border-left:3px solid var(--white);border-radius:4px;
+}
+.notice strong{color:var(--white);font-weight:600}
+.notice p{margin:0;color:var(--text)}
+
+/* Navegación */
+nav{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:5;
+  background:rgba(0,0,0,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{
+  flex:none;padding:6px 14px;border-radius:999px;color:var(--muted);
+  text-decoration:none;font-size:14px;font-weight:500;border:1px solid transparent;
+  transition:color .15s,border-color .15s;
+}
+nav a:hover,nav a:focus-visible{color:var(--white);border-color:var(--line-2);outline:none}
+
+/* Secciones */
+section{padding:56px 0 4px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sec-head h2{margin:0;font-size:28px;font-weight:600;letter-spacing:-.02em;color:var(--white)}
+.sec-head .tag{
+  font-size:13px;color:var(--faint);border:1px solid var(--line);
+  padding:2px 10px;border-radius:999px;
+}
+
+.rule{
+  display:grid;grid-template-columns:88px 1fr;gap:8px 24px;
+  padding:20px 0;border-bottom:1px solid var(--line);
+}
+.rule:last-child{border-bottom:0}
+.num{
+  font-size:56px;font-weight:700;line-height:1;letter-spacing:-.05em;
+  color:var(--line-2);font-variant-numeric:tabular-nums;
+  transition:color .2s;
+}
+.rule:hover .num{color:var(--muted)}
+.rule h3{margin:2px 0 4px;font-size:18px;font-weight:600;color:var(--white);letter-spacing:.005em}
+.rule p{margin:0;color:var(--muted);max-width:62ch}
+.rule p b{color:var(--text);font-weight:600}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;
+  background:var(--surface);border:1px solid var(--line);padding:1px 7px;border-radius:4px;color:var(--text);
+}
+em{color:var(--text);font-style:italic}
+
+footer{margin-top:64px;padding:32px 0 56px;border-top:1px solid var(--line);color:var(--faint);font-size:14px}
+
+@media (max-width:560px){
+  header{padding:64px 0 40px}
+  .rule{grid-template-columns:1fr}
+  .num{font-size:40px}
+  section{padding-top:44px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Reglas<br><span>del Staff</span></h1>
+    <p class="lead">Entrar al equipo no es para tener un colorcito diferente ni para creerte superior. Aquí se viene a trabajar.</p>
+    <div class="notice">
+      <p><strong>⚠️ Atención:</strong> al aceptar el rango, aceptas que si la cagas, te vas a miembro sin derecho a pataleo.</p>
+    </div>
+  </div>
+</header>
+
+<nav aria-label="Secciones">
+  <div class="wrap">
+    <a href="#poder">Uso del poder</a>
+    <a href="#confidencialidad">Confidencialidad</a>
+    <a href="#conducta">Conducta</a>
+    <a href="#trabajo">Trabajo</a>
+    <a href="#registro">Registro</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="poder">
+    <div class="sec-head"><h2>🛡️ Sobre el uso del poder</h2><span class="tag">I</span></div>
+    <article class="rule"><div class="num">1</div><div>
+      <h3>🚫 Cero abuso</h3>
+      <p>Nada de comandos por risas. Si usas <code>/mute</code>, <code>/kick</code> o <code>/ban</code> por un meme o porque alguien te cayó mal, <b>te vas fuera</b> ese mismo rato.</p>
+    </div></article>
+    <article class="rule"><div class="num">2</div><div>
+      <h3>🤝 Amiguismos</h3>
+      <p>Tus amigos <b>no tienen corona</b>. Si un amigo tuyo rompe las reglas, lo sancionas igual. Si vemos que perdonas faltas, el sancionado serás tú.</p>
+    </div></article>
+    <article class="rule"><div class="num">3</div><div>
+      <h3>🧠 Criterio y sentido común</h3>
+      <p>Las reglas están escritas, pero usa el cerebro. No seas un robot, pero tampoco un dictador. Si tienes dudas, <b>pregunta antes de actuar</b>.</p>
+    </div></article>
+  </section>
+
+  <section id="confidencialidad">
+    <div class="sec-head"><h2>🤫 Confidencialidad y lealtad</h2><span class="tag">II</span></div>
+    <article class="rule"><div class="num">4</div><div>
+      <h3>🔒 Lo que pasa en el staff, se queda aquí</h3>
+      <p>Prohibido filtrar capturas de canales privados o chismear sobre actualizaciones del servidor. Las filtraciones son motivo de <b>demote y warn inapelable</b>.</p>
+    </div></article>
+    <article class="rule"><div class="num">5</div><div>
+      <h3>👑 Cero hambre de rango</h3>
+      <p>Prohibido estar pidiendo promotes, roles especiales o beneficios extra (permisos de Admin) cada dos por tres. Si trabajas bien, se te reconocerá solo. Si insistes, pierdes el rango por pesado.</p>
+    </div></article>
+    <article class="rule"><div class="num">6</div><div>
+      <h3>📜 Logs sagrados</h3>
+      <p>Prohibido tocar o borrar canales de registros. Si intentas ocultar tus huellas borrando logs, asumimos que hiciste algo malo y <b>vas fuera</b>.</p>
+    </div></article>
+  </section>
+
+  <section id="conducta">
+    <div class="sec-head"><h2>🎭 Conducta y ejemplo</h2><span class="tag">III</span></div>
+    <article class="rule"><div class="num">7</div><div>
+      <h3>🎬 Cero dramas públicos</h3>
+      <p>Si tienes un problema con otro miembro del staff, se habla por privado. El primero que empiece a tirar indirectas por el chat general se va a miembro.</p>
+    </div></article>
+    <article class="rule"><div class="num">8</div><div>
+      <h3>🙏 Humildad ante todo</h3>
+      <p>No uses el rango para amenazar tipo <em>“Cuidado que soy admin”</em>. Eso es de ser inmaduro. Eres el ejemplo, no el matón del server.</p>
+    </div></article>
+    <article class="rule"><div class="num">9</div><div>
+      <h3>👤 Shadow modding</h3>
+      <p>No avises por privado a tus amigos para que borren cosas antes de que los pesquemos. Si encubres a alguien, eres <b>igual de culpable</b>.</p>
+    </div></article>
+  </section>
+
+  <section id="trabajo">
+    <div class="sec-head"><h2>⚙️ Trabajo y mantenimiento</h2><span class="tag">IV</span></div>
+    <article class="rule"><div class="num">10</div><div>
+      <h3>🟢 Actividad real</h3>
+      <p>Si desapareces 3 días sin avisar en <code>#ausencias</code>, te quitamos el rango. No queremos fantasmas.</p>
+    </div></article>
+    <article class="rule"><div class="num">11</div><div>
+      <h3>🎫 Atención de tickets</h3>
+      <p>Si hay tickets abiertos y estás hablando en el general, estás fallando. Si estás conectado, <b>estás disponible</b>.</p>
+    </div></article>
+    <article class="rule"><div class="num">12</div><div>
+      <h3>🛠️ No tocar la configuración</h3>
+      <p>Aunque tengas permisos, no cambies canales, colores o bots si nadie te lo pidió. No eres decorador de interiores.</p>
+    </div></article>
+    <article class="rule"><div class="num">13</div><div>
+      <h3>📢 Uso de pings</h3>
+      <p><code>@everyone</code> y <code>@here</code> solo se usan con permiso o en una emergencia real. Si pingeas por una tontería, pierdes el permiso de una.</p>
+    </div></article>
+  </section>
+
+  <section id="registro">
+    <div class="sec-head"><h2>📝 Registro y pruebas</h2><span class="tag">V</span></div>
+    <article class="rule"><div class="num">14</div><div>
+      <h3>📸 Sanciones con base</h3>
+      <p>Todo ban o mute tiene que llevar su razón clara y <b>captura de prueba</b>. Si el Owner o algún Administrador te pregunta y no tienes pruebas, se te cae todo.</p>
+    </div></article>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Al aceptar el rango del staff, aceptas estas reglas.</div>
+</footer>
+
+</body>
+</html>
